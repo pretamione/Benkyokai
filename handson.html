@@ -35,7 +35,7 @@
 <nav>
 <ul>
 
-<li><a href="index2.html">Top</a>
+<li><a href="index.html">Top</a>
 <li><a href="prepare.html">Webサイト作成に必要なもの</a>
 <li><a href="handson.html">Webサイト作成手順</a>
 
@@ -54,17 +54,42 @@
 <article>
 
 <h2>Webサイト作成手順</h2>
+Webサイト作成の手順はだいたい以下の手順<br>
 1.Azure CLIを起動<br>
-2.Azure CLIを起動<br>
-3.Azure CLIを起動<br>
-4.Azure CLIを起動<br>
+2.gitから作成したWebサイトの素材を取得<br>
+3.az webapp upコマンドでWebサイト作成<br>
+4.表示されたURLからWebサイトへアクセス<br>
 
-<h3>準備物イメージ</h3>
-このWebサイトを作成するために準備したフォルダイメージ。これだけで作成可能<br>
-<hr>
-<br><a href="#"><img src="image/file_list.gif" width="500" height="400" alt="image"></a><br>
+<h3>1.Azure CLIを起動</h3>
+Azureを操作するためのCLIを起動。起動画面は以下画像参照<br>
+Azure PortalなどのGUIからでも作成可能だが今回はEラーニング記載の手順に沿ってCLIから実行
+<br><a href="#"><img src="image/azure_cli.gif" width="350" height="150" alt="image"></a><br>
 <hr>
 
+<h3>2.gitから作成したWebサイトの素材を取得</h3>
+Azure CLI上から 「git clone 作成したリポジトリのURL」などのコマンドで事前に作成したWebサイトの素材を取得<br>
+<hr>
+
+<h3>3.az webapp upコマンドでWebサイト作成</h3>
+Azure CLI上から「az webapp up」コマンドを実行してWebサイトを作成<br>
+「az webapp up」コマンドについて実行時に以下を行う<br>
+<div class="kajo_list">
+    <ul>
+        <li>引数($ResourceGroup)で指定した名前でリソースグループ及びApp Serviceプランを作成</li>
+        <li>引数($aooName)で指定した名前でアプリの作成</li>
+        <li>Webアプリを作成し，ファイル内のコードを適用する</li>
+    </ul>
+</div>
+実行時の画面は以下の通り，成功すると作成WebサイトのURLが表示される
+<br><a href="#"><img src="image/appup.gif" width="600" height="450" alt="image"></a><br>
+<hr>
+
+<h3>4.表示されたURLからWebサイトへアクセス</h3>
+3.で表示されたURLから作成したWebサイトへアクセスることができる<br>
+今回は一番シンプルな方法で作成したが，先ほど紹介した，オートスケーリングや開発環境の設定についてもAzure Portal等から行う事ができる
+<br><a href="#"><img src="image/site_top.gif" width="600" height="350" alt="image"></a><br>
+<hr>
+実践編 -Azure App Service-についての紹介終わり
 <div style="height:100px"></div>
 
 
